@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   prime-cnc:
   - apiVersion: v2
-    created: "2022-04-27T16:45:17.790414479Z"
+    created: "2022-04-27T19:24:41.090257886Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -14,7 +14,7 @@ entries:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-f466e1ffb9.tgz
     version: 0.1-f466e1ffb9
   - apiVersion: v2
-    created: "2022-04-27T16:45:17.784499751Z"
+    created: "2022-04-27T19:24:41.079538793Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -26,7 +26,19 @@ entries:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-bf25bb951c.tgz
     version: 0.1-bf25bb951c
   - apiVersion: v2
-    created: "2022-04-27T16:45:17.773128891Z"
+    created: "2022-04-27T19:24:41.067641973Z"
+    dependencies:
+    - condition: monitoring.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.18.0
+    digest: c1101384452b97344193f094ffe86b041e59579987f1f7e76ab6f939dbcb7005
+    name: prime-cnc
+    urls:
+    - https://kami-no.github.io/helm-charts/prime-cnc-0.1-92041febbb.tgz
+    version: 0.1-92041febbb
+  - apiVersion: v2
+    created: "2022-04-27T19:24:41.061664702Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -38,7 +50,7 @@ entries:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-71108f9e6c.tgz
     version: 0.1-71108f9e6c
   - apiVersion: v2
-    created: "2022-04-27T16:45:17.766492336Z"
+    created: "2022-04-27T19:24:41.047689983Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -49,4 +61,4 @@ entries:
     urls:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-00cab14fc5.tgz
     version: 0.1-00cab14fc5
-generated: "2022-04-27T16:45:17.746813636Z"
+generated: "2022-04-27T19:24:41.041638132Z"
