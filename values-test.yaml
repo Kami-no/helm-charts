@@ -1,0 +1,52 @@
+test: true
+testData:
+  # First case is to see what happens when we add sub-minimal amount of vCores.
+  # In this case we cannot stick to the limit, because it is adjusted only by
+  # compile brokers. However, it is a nonsensical corner case, so it does not
+  # make sense to fix it. It would only complicate the code.
+  - inputCapacity: 1
+    expectedBrokers: 0
+    expectedCaches: 1
+    expectedGateways: 1
+  - inputCapacity: 18
+    expectedBrokers: 1
+    expectedCaches: 1
+    expectedGateways: 1
+  # Below are side effects of the formula - more vCores will add more brokers, however
+  # more brokers will trigger adding of a new cache or gateway (or both), but there is no capacity
+  # for all of them. As the formula subtracts brokers to fit into the
+  # alotted capacity.
+  # Therefore, sometimes more vCores will mean less brokers, but more other infrastructure components.
+  - inputCapacity: 228
+    expectedBrokers: 30
+    expectedCaches: 2
+    expectedGateways: 1
+  - inputCapacity: 229
+    expectedBrokers: 29
+    expectedCaches: 2
+    expectedGateways: 2
+  - inputCapacity: 300
+    expectedBrokers: 40
+    expectedCaches: 2
+    expectedGateways: 2
+  - inputCapacity: 302
+    expectedBrokers: 39
+    expectedCaches: 3
+    expectedGateways: 2
+  - inputCapacity: 307
+    expectedBrokers: 40
+    expectedCaches: 3
+    expectedGateways: 2
+  - inputCapacity: 314
+    expectedBrokers: 41
+    expectedCaches: 3
+    expectedGateways: 2
+  - inputCapacity: 447
+    expectedBrokers: 60
+    expectedCaches: 3
+    expectedGateways: 2
+  # same case as above, only with gateways and caches combined, so 2 brokers get subtracted
+  - inputCapacity: 448
+    expectedBrokers: 58
+    expectedCaches: 4
+    expectedGateways: 3
