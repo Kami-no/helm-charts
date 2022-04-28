@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   prime-cnc:
   - apiVersion: v2
-    created: "2022-04-27T19:24:41.090257886Z"
+    created: "2022-04-28T01:46:42.454870469Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -14,7 +14,7 @@ entries:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-f466e1ffb9.tgz
     version: 0.1-f466e1ffb9
   - apiVersion: v2
-    created: "2022-04-27T19:24:41.079538793Z"
+    created: "2022-04-28T01:46:42.449035271Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -26,7 +26,7 @@ entries:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-bf25bb951c.tgz
     version: 0.1-bf25bb951c
   - apiVersion: v2
-    created: "2022-04-27T19:24:41.067641973Z"
+    created: "2022-04-28T01:46:42.445419695Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -38,7 +38,7 @@ entries:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-92041febbb.tgz
     version: 0.1-92041febbb
   - apiVersion: v2
-    created: "2022-04-27T19:24:41.061664702Z"
+    created: "2022-04-28T01:46:42.441103598Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -50,7 +50,19 @@ entries:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-71108f9e6c.tgz
     version: 0.1-71108f9e6c
   - apiVersion: v2
-    created: "2022-04-27T19:24:41.047689983Z"
+    created: "2022-04-28T01:46:42.43461437Z"
+    dependencies:
+    - condition: monitoring.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.18.0
+    digest: a393eede2ec22b831f3116244465d51f3c56d2cc685b6fd241ad39881c8f3bf1
+    name: prime-cnc
+    urls:
+    - https://kami-no.github.io/helm-charts/prime-cnc-0.1-6582d96549.tgz
+    version: 0.1-6582d96549
+  - apiVersion: v2
+    created: "2022-04-28T01:46:42.430830804Z"
     dependencies:
     - condition: monitoring.enabled
       name: grafana
@@ -61,4 +73,4 @@ entries:
     urls:
     - https://kami-no.github.io/helm-charts/prime-cnc-0.1-00cab14fc5.tgz
     version: 0.1-00cab14fc5
-generated: "2022-04-27T19:24:41.041638132Z"
+generated: "2022-04-28T01:46:42.42123206Z"
